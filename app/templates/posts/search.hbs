@@ -1,0 +1,9 @@
+{{input placeholder="Search..." value=q}}
+<button {{action "searchApi"}}>Search</button>
+
+
+{{#each post in model}}
+{{post.title}}
+{{post.body}}
+{{/each}}
+{{outlet}}

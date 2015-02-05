@@ -1,0 +1,6 @@
+<h1>Edit</h1>
+{{textarea value=title}}
+{{textarea value=body}}
+<button {{action 'editPost' this}}>Edit</button>
+<button {{action 'deletePost' this}}>delete</button>
+{{#link-to 'posts.index'}}cancel{{/link-to}}

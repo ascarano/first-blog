@@ -1,0 +1,6 @@
+<h1>Create a Post</h1>
+{{textarea placeholder="add post title" value=postTitle}}
+{{textarea placeholder="add post body" value=postBody}}
+<button {{action 'newPost'}}>Create Post</button>
+{{#link-to 'posts.index'}}cancel{{/link-to}}
+{{outlet }}

@@ -1,0 +1,58 @@
+// @import "reset";
+@import "colors";
+@import "typography";
+// @import "layout";
+// can create a sass partial for each component, creating a separation of styles
+@import "util";
+
+// mixin/nested example:
+// section {
+//  @include span(red)
+//  ul {
+//   background: green;
+//    li {
+//      border: 1px solid green;
+//       }
+//     }
+//  }
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 20px;
+  background: #3E3E3E;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #C0FFBF;
+}
+
+.columns:before,
+.columns:after {
+  content:"";
+  display:table;
+}
+.columns:after {
+  clear:both;
+}
+.columns {
+  zoom:1;
+  overflow: hidden;
+}
+
+.column {
+  float: left;
+}
+
+.two.columns .column, .column-two {
+  width: 50%;
+}
+
+.columns.three .column, .column-three {
+  width: 33.33333%;
+}
